@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'font';
+    src: url('../font/FormulaCondensed-bold.otf');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('../font/FormulaCondensed-Light.otf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
+body {
+    font-family: 'font', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    height: 100% !important;
+    background-color: #ffffff !important;
+    color: #333333;
+    font-size: 28px;
+}
+
+.text {
+    width: 1200px;
+    height: 450px;
+    border-radius: 50px;
+    background-color: #ffc481;
+    text-align: start;
+    resize: none;
+    padding: 30px;
+    border-color: #e0f1ff;
+}
+
+.text:hover{
+  background-color: #fbbe78;
+}
+
+.text:focus{
+  outline: 2px solid #fcb15a;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  transform: scale(1.1);
+}
+
+/* Optional: Styling the file name */
+.custom-file-label {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+  /* Hidden input file */
+  .file-input {
+      display: none;
+    }
+
+.button {
+  background-color: #000;
+  color: white;
+  border: transparent;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.button:hover{
+  background-color: #131313;
+  transform:scale(1.1);
+
+}
+
+.border {
+  background-color: #ffc481;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: black;
+}
+
+.border:hover {
+  background-color: #fbbe78;
+}
+
+.border:focus {
+  outline: 2px solid #fcb15a;
+}
+
+ ::placeholder{
+  color: #0000004b;
+ }
+
+.pindah{
+  margin-bottom: -15px;
+}

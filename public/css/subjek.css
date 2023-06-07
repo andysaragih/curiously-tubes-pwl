@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'font';
+    src: url('../font/FormulaCondensed-bold.otf');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('../font/FormulaCondensed-Light.otf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
+body {
+    font-family: 'font', Arial, Helvetica, sans-serif;
+    height: 100% !important;
+    color: #222222 !important;
+    background-size: cover;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-image: linear-gradient(to right, #7D2AE8, #00C3CB);
+    font-family: 'font';
+}
+
+.navbar-nav a{
+font-size: 15px;
+text-transform: uppercase;
+font-weight: 500;
+}
+
+.navbar .navbar-brand {
+    color: rgb(152, 62, 62);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.clearfix_top {
+    margin-top: 1rem !important;
+    font-size: 70px;
+    color: #F59A35 !important;
+}
+
+.warna {
+    color: #F59A35 !important;
+    font-size: 38px !important;
+}
+
+.login {
+    font-size: 30px !important;
+    color: white !important;
+    letter-spacing: 1.1px !important;
+}
+
+.card .card-body {
+    color: #333333;
+    text-align: center;
+    margin-top: 5px;
+    font-family: "font2", Arial, Helvetica, sans-serif; 
+}
+
+.card .card-body .card-title {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.clearfix_top {
+    color: #00BEC6;
+}
+
+.container-fluid{
+    margin-top: 101px;
+    color:#333333 !important;
+}
+
+.card{
+    background-color: white !important;
+    border-color: #d2d2d2;
+}
+
+p{
+    font-size: calc(12px + (14 - 12) * ((100vw - 360px) / (1600 - 360))) !important; 
+    display: flex;
+}
+
+h3{
+    font-size: calc(24px + (30 - 24) * ((100vw - 360px) / (1600 - 360))) !important; 
+}
+
+.social{
+    font-size: 21px !important; 
+}
+
+
+.color-text{
+    color: white !important;
+}
+
+
+button {
+    font-size: calc(12px + (13 - 12) * ((100vw - 360px) / (1600 - 320))) !important;
+    background-color: #2CA6FB !important;
+    padding-left:  calc(20px + (28 - 20) * ((100vw - 360px) / (1600 - 360))) !important; 
+    padding-right: calc(20px + (28 - 20) * ((100vw - 360px) / (1600 - 360))) !important; 
+    padding-top:  calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important; 
+    padding-bottom:   calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important; 
+ }
+
+ button:focus {
+     -moz-box-shadow: none !important;
+     -webkit-box-shadow: none !important;
+     box-shadow: none !important;
+     outline-width: 0
+ }
+
+ footer{
+    color:#caced1 !important;
+ }
+
+ li{
+     margin-top: 20px ;
+     margin-bottom: 20px ;
+ }
+ 
+.Careers{ 
+    cursor: pointer;
+    color: #1E88E5;
+}
+
+.row-1{
+    background-color:#1E242A !important;
+}
+
+.row-2{
+    
+    background-color: #28323C !important;
+}
+
+
+.card-bg {
+    border-radius:  10px !important;
+    overflow: hidden !important;
+    padding: 8px;
+    text-align: center;
+    color: #666666;
+}
+
+.text {
+    
+    font-family: 'font2' !important;
+    letter-spacing: 1.1px;
+    font-size: 20px;
+}
+
+.judul1 {
+    border-radius: 10px;
+    text-align: center;
+    color: #333333;
+}
+
+.link {
+    border: transparent !important;
+    background-color: #7D2AE8 !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.button {
+    height: 30px;
+    width: 40px;
+    font-size: 15px;
+    color: black;
+    border: solid 1px black;
+    padding-top: 3px;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+
+}
+
+.button:focus {
+    background-color: #059DA2;
+    color: rgb(255, 255, 255);
+}
+
+.buttonn {
+    height: 30px !important;
+    width: 100px !important;
+    font-size: 15px;
+    color: black;
+    border: solid 1px black;
+    padding-top: 3px;
+    transition: 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.buttonn:hover {
+    transform: scale(1.1);
+
+}
+
+.buttonn:focus {
+    background-color: #059DA2;
+    color: rgb(255, 255, 255);
+}
+
+.search {
+    color: #333333;
+    background-color: #F59A35 !important;
+    border: 0;
+    letter-spacing: 1px;
+}

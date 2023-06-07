@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'font';
+    src: url('../font/FormulaCondensed-bold.otf');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('../font/FormulaCondensed-Light.otf');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'font', Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #043a50, #059DA2, #3299ec);
+    color: white;
+}
+
+.box {
+    box-shadow: 5px 20px 50px #000;
+}
+
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+input{
+    width: 100%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+
+input label{
+    color: #193d66;
+}
+
+button{
+    width: 50%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #193d66;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #056a92;
+}
+
