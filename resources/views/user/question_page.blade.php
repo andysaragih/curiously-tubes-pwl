@@ -44,7 +44,7 @@
                 <a href="fav.html"><i class="fa-solid fa-heart fa-bounce login" style="color: white;"></i></a>
                 </li> -->
                     <li class="nav-item">
-                        <a href="{{route('profile.user', ['user' => auth()->user()->id])}}" class="login">profile</a>
+                        <a href="{{route('profile.user', ['user' => auth()->user()->id])}}" class="login">Profile</a>
                     </li>
                 </ul>
             </div>
@@ -175,7 +175,37 @@
             <!-- CARD KANAN -->
             <!-- CARD KANAN -->
             <!-- CARD KANAN -->
-            @include('user.sidebarkanan')
+
+            <div class="col-3">
+                <div class="card rounded-4" style="width: 290px; min-height: 265px; margin-left: -115px">
+                    <div class="d-flex align-items-center" style="padding: 20px;">
+                        <img src="{{asset('img/'.auth()->user()->photo_profil)}}"
+                            style="border-radius: 100%; object-fit: cover; width: 80px; height: 80px;">
+                        <a href="{{route('profile.user', ['user' => auth()->user()->id])}}">
+                            <p class=" text ms-3" style="color: #333333;">
+                                {{auth()->user()->username}}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="background-text pinda1 text"
+                            style="background-color: #e0f1ff; margin-top: 10px; margin-left: 20px; padding-left: 10px; padding-right: 10px;">
+                            <i class="fa-solid fa-question"
+                                style="color: #F59A35;"></i>&nbsp;{{count(auth()->user()->user)}}
+                            Pertanyaan
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="background-text pindah1 text"
+                            style="background-color: #e0f1ff; margin-top: 10px; margin-left: 20px; padding-left: 10px; padding-right: 10px;">
+                            <i class="fa-solid fa-comment"
+                                style="color: #F59A35;"></i>&nbsp;{{count(auth()->user()->answer)}}
+                            Jawaban
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="row">
             {{-- @dd($answers) --}}
@@ -197,12 +227,18 @@
                             style="padding-left: 10px; padding-right: 10px;">
                             <img src="{{asset('img/'.$answer->user->photo_profil)}}"
                                 style="border-radius: 100%; object-fit: cover; width: 40px; height: 40px;">
-                            <span class="text ms-1 me-1" style="margin-left: 10px !important;"> <a href=""
+                            <span class="text ms-1 me-1" style="margin-left: 10px !important;"> <a
+                                    href="{{route('profile.user', ['user' => $answer->user->id])}}"
                                     class="mapel"><b>{{$answer->user->username}}</b></a><b>
                         </div>
 
                         <div class="card-bg">
                             <p style="text-decoration: none;">{!!$answer->answer!!}</p>
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                @if ($answer->gambar != NULL)
+                                <img src="{{asset('img/'.$answer->gambar)}}" width="50%">
+                                @endif
+                            </div>
                         </div>
                         @php
 

@@ -29,7 +29,7 @@
         <div class="col">
           <div class="background-text pinda1 text"
             style="margin-top: 15px; margin-left: 20px; padding-left: 10px; padding-right: 10px; width: 270px; border-bottom: 1px solid #F59A35;">
-            </i>About Me
+            </i>Tentang Saya
           </div>
         </div>
         <div class="col">
@@ -45,7 +45,7 @@
         <div class="col-6" style="">
           <div class="card text" style="border: none;">
             <div class="text-end"><a href="" data-bs-toggle="modal" data-bs-target="#ModalFollowing">
-                <p>Following </p>
+                <p>Mengikuti </p>
                 <p>{{count($user->following)}}</p>
               </a></div>
           </div>
@@ -53,7 +53,7 @@
         <div class="col-6" style="">
           <div class="card text" style="border: none;">
             <div class="text my-0"><a href="" data-bs-toggle="modal" data-bs-target="#ModalFollowers">
-                <p>Followers</p>
+                <p>Diikuti</p>
                 <p>{{count($user->follower)}}</p>
               </a></div>
           </div>
@@ -65,7 +65,7 @@
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Following</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Mengikuti</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -86,7 +86,7 @@
                   @method('DELETE')
                   <button type="submit" class="background-text pindah1 text"
                     style="background-color: #e0f1ff padding: 5px; border-radius: 50px; text-align: center; ">
-                    <i class="fa-solid fa-user-minus" style="color: #F59A35;"></i> Unfollow
+                    <i class="fa-solid fa-user-minus" style="color: #F59A35;"></i> Batal Mengikuti
                   </button>
                 </form>
               </div>
@@ -110,7 +110,7 @@
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Following</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Diikuti</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -121,7 +121,7 @@
                   style="border-radius: 100%; object-fit: cover; width: 40px; height: 40px;">
               </div>
               <div class="col-5 d-flex align-items-center justify-content-start">
-                <a href="{{route('profile.user', ['user' => $follow->follower->id])}}"
+                <a href="{{route('profile.user', ['user' => $follower->user->id])}}"
                   style="color:black;">{{$follower->user->username}}</a>
               </div>
               <div class="col-5 d-flex align-items-center justify-content-center">
@@ -138,18 +138,6 @@
       </div>
     </div>
 
-    @php
-
-    // $follow = $user->follow->user_id;
-    // dd($follow);
-    // $status = [];
-
-    // foreach ($follow as $isiFollow) {
-    // $status[] = $isiFollow['user_id'];
-    // }
-    // $user_id = auth()->user()->id;
-    // $jumlahLike=count($status);
-    @endphp
     @if ($user->id == auth()->user()->id)
     <div class=" d-flex align-items-center">
       <a href="{{route('edit.profile', ['user' => auth()->user()->id])}}">
@@ -167,7 +155,7 @@
         @method('DELETE')
         <button type="submit" class="background-text pindah1 text"
           style="background-color: #e0f1ff; margin-top: 10px; margin-left: 20px; padding: 5px; width: 270px; border-radius: 50px; text-align: center; ">
-          <i class="fa-solid fa-user-minus" style="color: #F59A35;"></i> Unfollow
+          <i class="fa-solid fa-user-minus" style="color: #F59A35;"></i> Batal Mengikuti
         </button>
       </form>
     </div>
@@ -179,7 +167,7 @@
         <input type="hidden" name="follower_id" value="{{ $user->id }}">
         <button type="submit" class="background-text pindah1 text"
           style="background-color: #e0f1ff; margin-top: 10px; margin-left: 20px; padding: 5px; width: 270px; border-radius: 50px; text-align: center; ">
-          <i class="fa-solid fa-user-plus" style="color: #F59A35;"></i> Follow
+          <i class="fa-solid fa-user-plus" style="color: #F59A35;"></i> Mengikuti
         </button>
       </form>
     </div>

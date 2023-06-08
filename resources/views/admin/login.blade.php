@@ -68,13 +68,6 @@
                                             <div class="text-danger">{{$message}}</div>
                                             @enderror
                                         </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
                                         <button href="{{route('login')}}" class="btn btn-primary btn-user btn-block"
                                             type="submit">
                                             Login

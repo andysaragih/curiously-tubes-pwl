@@ -73,31 +73,15 @@ class AdminController extends Controller
             'email' => 'required',
             'password' => 'required',
             'username' => 'required',
-            'gender' => 'required',
-            'jenjang' => 'required',
-            'aboutme' => 'required',
-            'photo_profil' => 'image|mimes:jpg,jpeg,png|max:4096'
+            'user_role' => 'required',
 
         ]);
 
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->name = $request->username;
-        $user->gender = $request->gender;
-        $user->jenjang = $request->jenjang;
-        $user->aboutme = $request->aboutme;
-
-        if ($request->hasFile('photo_profil')) {
-            // define image location in local path
-            $location = public_path('/img');
-
-            // ambil file img dan simpan ke local server
-            $request->file('photo_profil')->move($location, $request->file('photo_profil')->getClientOriginalName());
-
-            // simpan nama file di database
-            $user->photo_profil = $request->file('photo_profil')->getClientOriginalName();
-        }
+        $user->username = $request->username;
+        $user->user_role = $request->user_role;
 
         $user->save();
 

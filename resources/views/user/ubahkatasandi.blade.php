@@ -135,7 +135,8 @@
 
                                         <tr>
                                             <td>
-                                                Perubahan alamat email
+                                                <div style="margin-left:10px">
+                                                    Perubahan alamat email</div>
                                                 <div class="d-flex align-items-center justify-content-start"
                                                     style="padding-left: 10px; padding-right: 10px; padding-bottom: 8px; border-bottom: 2px solid #e0f1ff; margin-bottom: 10px; width: 650px;">
                                                 </div>
@@ -144,7 +145,8 @@
 
                                         <tr style="margin-bottom: 10px;">
                                             <td>
-                                                <label for="pwrn2" style="margin-bottom: 10px;">Nama Lengkap</label>
+                                                <label for="pwrn2" style="margin-bottom: 10px; margin-left: 10px">Nama
+                                                    Lengkap</label>
                                                 <input id="name" name="name" type="text" class="mt-1 block w-full"
                                                     value="{{$user->name}}" required autofocus>
                                                 <x-input-error class="mt-2" :messages="$errors->get('name')" />
@@ -153,15 +155,19 @@
 
                                         <tr style="margin-bottom: 10px;">
                                             <td>
-                                                <label for="email" style="margin-bottom: 10px;">Email Saat Ini</label>
+                                                <label for="email"
+                                                    style="margin-bottom: 10px; margin-left: 10px; color: #333">
+                                                    Email
+                                                    Saat
+                                                    Ini</label>
                                                 <input type="email" id="email" name="email" type="email"
-                                                    class="mt-1 block w-full" value="{{$user->email}}" required
-                                                    autocomplete="username">
+                                                    style="margin-left: 7px" class="mt-1 block w-full"
+                                                    value="{{$user->email}}" required autocomplete="username">
                                                 <x-input-error class="mt-2" :messages="$errors->get('email')" />
                                                 @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !
                                                 $user->hasVerifiedEmail())
                                                 <div>
-                                                    <p class="text-sm mt-2 text-gray-800">
+                                                    <p class="text-sm mt-2 text-gray-800" style="margin-left: 10px">
                                                         {{ __('Your email address is unverified.') }}
 
                                                         <button form="send-verification"
@@ -184,7 +190,7 @@
                                             <td>
                                                 <div class="flex items-center gap-4">
                                                     <button type="submit" value="Ubah!" class="tambah2"
-                                                        style="margin-left: 161px; margin-top: 21px;">Ubah!
+                                                        style="margin-left: 10px;">Ubah!
                                                     </button>
                                                     @if (session('status') === 'profile-updated')
                                                     <p x-data="{ show: true }" x-show="show" x-transition

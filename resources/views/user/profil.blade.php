@@ -48,7 +48,7 @@
                 <div class="row">
                   <div class="col-2">
                     <img src="{{asset('img/'.$user->photo_profil)}}"
-                      style="border-radius: 100%; object-fit: cover; width: 40px; height: 40px;">
+                      style="border-radius: 100%;  margin-left:70px; object-fit: cover; width: 30px; height: 30px;">
                   </div>
                   <div class="col-10">
                     <h5><b>{{$answer->user->username}}</b></h5> terjawab
@@ -61,11 +61,11 @@
                 </div>
                 <div class="row">
                   <div class="col">
-                    <h5 class="text-start">
+                    <h6 class="text-start" style="margin-top: -50px">
                       {{$answer->created_at->diffForHumans()}} .
                       <b>{{$answer->question->subject->subject}}</b>
                       </span>
-                    </h5>
+                      </h5>
                   </div>
                 </div>
               </div>

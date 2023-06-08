@@ -235,6 +235,7 @@ border-color: #333333 !important;
     width: 205px;
     text-align: left;
     transition: 0.3s ease-in-out;
+    border: 1px solid #bcbcbc;
   }
 
   .btn:hover {

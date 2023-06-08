@@ -74,7 +74,7 @@
 
   <div class="clearfix d-flex align-items-center justify-content-center" style="margin-top: 100px;">
     <h1 class="clearfix_top">
-      Have <br> a question? <br>
+      Punya <br> Pertanyaan? <br>
       <button type="button" class="btn btn-primary mt-2 mb-3 link" style="color: #F59A35 !important;"
         data-bs-toggle="modal" data-bs-target="#exampleModal">TANYA SEKARANG</button>
     </h1>
@@ -85,7 +85,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Do you wanna ask?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Apa yang ingin Anda tanyakan?</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -102,7 +102,7 @@
             </div>
             <div class="mb-3">
               <select class="form-select" name="subject">
-                <option selected>-->>Choose subject</option>
+                <option selected>-->>Pilih Mapel</option>
                 @foreach ($subjects as $subject)
                 <option value="{{$subject->id}}">{{$subject->subject}}</option>
                 @endforeach
@@ -133,12 +133,12 @@
             <div class="text">
 
               <div class="jdl">
-                <b> &nbsp; Subject</b>
+                <b> &nbsp; Mapel</b>
               </div>
 
               <div>
                 <a href="{{route('home')}}"><button type="submit" name="subject" value="{{ $subject->subject }}"
-                    class="btn btn-outline-primary" onclick="resetButtonState(this)">
+                    class="btn btn-outline-secondary" style="width: 267px" onclick="resetButtonState(this)">
                     <span class="icon-container">
                       <i class="bi bi-grid-3x3-gap" style="font-size: 18px;"></i>
                     </span>
@@ -148,8 +148,8 @@
               <form action="{{ route('filter') }}" method="GET">
                 @foreach ($subjects as $subject)
                 <div>
-                  <button type="submit" name="subject" value="{{ $subject->subject }}" class="btn btn-outline-primary"
-                    onclick="resetButtonState(this)">
+                  <button type="submit" name="subject" value="{{ $subject->subject }}" class="btn btn-outline-secondary"
+                    style="width: 267px" onclick="resetButtonState(this)">
                     <span class="icon-container">
                       <i class="bi bi-grid-3x3-gap" style="font-size: 18px;"></i>
                     </span>

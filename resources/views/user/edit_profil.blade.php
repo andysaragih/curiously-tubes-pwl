@@ -62,9 +62,8 @@
                   @method('PUT')
                   <table style="text-align: left;">
                     <tr>
-                      <h5 style="text-align: left;">Edit profil | <a href="{{route('profile.edit')}}">Ingin mengubah
-                          password dan
-                          email?</a>
+                      <h5 style="text-align: left;">Edit profile | <a href="{{route('profile.edit')}}">Ingin mengubah
+                          password dan email?</a>
                       </h5>
                       <div class="d-flex align-items-center justify-content-start"
                         style="border-bottom: 2px solid #e0f1ff; margin-bottom: 15px; width: 650px;"></div>
@@ -81,7 +80,7 @@
 
                     <tr>
                       <td>
-                        Perubahan data dasar
+                        Pertanyaan
                         <div class="d-flex align-items-center justify-content-start"
                           style="padding-left: 10px; padding-right: 10px; padding-bottom: 8px; border-bottom: 2px solid #e0f1ff; margin-bottom: 10px; width: 650px;">
                         </div>
@@ -125,7 +124,7 @@
 
                     <tr>
                       <td>
-                        <label for="aboutme" style="margin-bottom: 21px;">About me</label><br>
+                        <label for="aboutme" style="margin-bottom: 21px;">Tentang saya</label><br>
                         <textarea name="aboutme" id="" cols="30" rows="10">{{$user->aboutme}}</textarea>
                     </tr>
 
@@ -194,9 +193,7 @@
         <div class="card"
           style="width: 290px; min-height: 887px; margin-left: -188px; border-left: transparent; border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
           <div class="d-flex align-items-center" style="padding: 20px; background-color: #FCF8E3;;">
-            <a href="profil.html">
-              <img src="{{asset('img/'.$user->photo_profil)}}" style=" object-fit: cover; width: 80px; height: 80px;">
-            </a>
+            <img src="{{asset('img/'.$user->photo_profil)}}" style=" object-fit: cover; width: 80px; height: 80px;">
             <div class="text ms-3" style="color: #333333;">
               Haloo <b> {{$user->username}} </b><br>
             </div>
@@ -212,17 +209,7 @@
   <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('js/popper.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
-  @if (session('status'))
-  <script>
-    swal({
-          title: 'Berhasil',
-          text: '{{ session('status') }}',
-          icon: 'success',
-          timer: 3000,
-          button: false
-      });
-  </script>
-  @endif
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">

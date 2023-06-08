@@ -13,14 +13,14 @@
             <div class="background-text pinda1 text"
                 style="background-color: #e0f1ff; margin-top: 10px; margin-left: 20px; padding-left: 10px; padding-right: 10px;">
                 <i class="fa-solid fa-question" style="color: #F59A35;"></i>&nbsp;{{count(auth()->user()->user)}}
-                Question
+                Pertanyaan
             </div>
         </div>
         <div class="d-flex align-items-center">
             <div class="background-text pindah1 text"
                 style="background-color: #e0f1ff; margin-top: 10px; margin-left: 20px; padding-left: 10px; padding-right: 10px;">
                 <i class="fa-solid fa-comment" style="color: #F59A35;"></i>&nbsp;{{count(auth()->user()->answer)}}
-                Answer
+                Jawaban
             </div>
         </div>
     </div>

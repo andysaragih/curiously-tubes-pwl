@@ -52,10 +52,7 @@
                                 <th scope="col">Usename</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Password</th>
-                                <th scope="col">Gender</th>
-                                <th scope="col">Jenjang</th>
-                                <th scope="col">About</th>
-                                <th scope="col">Photo Profile</th>
+                                <th scope="col">Role</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -70,10 +67,7 @@
                                     {{$user->email}}</td>
                                 <td style="max-width: 150px; overflow: hidden; text-overflow: ellipsis;">
                                     {{$user->password}}</td>
-                                <td>{{$user->gender}}</td>
-                                <td>{{$user->jenjang}}</td>
-                                <td>{{$user->aboutme}}</td>
-                                <td><img src="{{asset('img/'.$user->photo_profil)}}" width="100px" height="100px"></td>
+                                <td>{{$user->user_role}}</td>
                                 <td>
                                     <div class=" row">
                                         <div class="col-6">

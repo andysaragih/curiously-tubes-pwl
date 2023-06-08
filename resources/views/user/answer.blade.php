@@ -42,11 +42,8 @@
       <!-- <button class="btn btn-outline-success bismillah" type="submit" style="border-radius: 20px; height: 42px;" onclick="resetButtonState(this)"><i class="fa-solid fa-magnifying-glass"></i></button> -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item me-3">
-              <a href="fav.html"><i class="fa-solid fa-heart fa-bounce login" style="color: white;"></i></a>
-              </li> -->
           <li class="nav-item">
-            <a href="profil.html" class="login">profil</a>
+            <a href="{{route('profile.user', ['user' => auth()->user()->id])}}" class="login">Profile</a>
           </li>
         </ul>
       </div>
@@ -69,8 +66,7 @@
             <textarea name="answer" id="myTextarea" class="text-area form-control" cols="60" rows="10"
               placeholder="Answer..">{{old('answer')}}</textarea>
             <input type="file" id="gambar" name="gambar" class="form-control">
-            <button type="submit" class="tambah" style="margin-top: 15px;">Tambahkan Jawaban
-              Anda</button>
+            <button type="submit" class="tambah" style="margin-top: 15px;">Tambahkan Jawaban Anda</button>
           </div>
         </form>
       </div>

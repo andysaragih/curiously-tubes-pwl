@@ -69,44 +69,12 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="gender" class="form-label">Gender</label>
+                            <label for="user_role" class="form-label">Gender</label>
                             <select class="form-select form-control w-50" name="gender"
                                 aria-label="Default select example">
-                                <option @if ($user->gender == "Pria") selected @endif>Pria</option>
-                                <option @if ($user->gender == "Wanita") selected @endif>Wanita</option>
+                                <option @if ($user->user_role == "user") selected @endif>User</option>
+                                <option @if ($user->user_role == "admin") selected @endif>Admin</option>
                             </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="jenjang" class="form-label">Jenjang</label>
-                            <select class="form-select form-control w-50" name="jenjang"
-                                aria-label="Default select example">
-                                <option value="Sekolah Menengah Atas" @if ($user->jenjang == "Sekolah Menengah Atas")
-                                    selected
-                                    @endif>Sekolah
-                                    Menengah Atas
-                                </option>
-                                <option value="Sekolah Menengah Pertama" @if ($user->jenjang == "Sekolah Menengah
-                                    Pertama")
-                                    selected
-                                    @endif>Sekolah
-                                    Menengah Pertama</option>
-                                <option value="Sekolah Dasar" @if ($user->jenjang == "Sekolah Dasar") selected
-                                    @endif>Sekolah
-                                    Dasar</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="aboutme" class="form-label">About</label>
-                            <textarea class="form-control w-50" name="aboutme" id="" cols="30"
-                                rows="10">{{$user->aboutme}}</textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="photo_profil" class="form-label">About</label>
-                            <input type="file" class="form-control w-50 @error('name') is-invalid @enderror"
-                                id="photo_profil" name="photo_profil" value="{{$user->photo_profil}}">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
